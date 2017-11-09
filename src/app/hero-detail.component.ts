@@ -1,8 +1,8 @@
-import { Component }              from '@angular/core';
-import { FormControl }            from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'hero-detail',
+  selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html'
 })
 export class HeroDetailComponent {
