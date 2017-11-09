@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html'
 })
 export class HeroDetailComponent {
-  heroForm = new FormGroup({
-    name: new FormControl()
-  });
+  heroForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder)  {
+    this.createForm();
+  }
+
+  createForm(): void {
+    this.heroForm = this.formBuilder.group({
+      name: ''
+    });
+  }
 }
