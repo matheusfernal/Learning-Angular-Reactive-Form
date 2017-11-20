@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { states, Address, Hero } from './data-model';
@@ -8,6 +8,8 @@ import { states, Address, Hero } from './data-model';
   templateUrl: './hero-detail.component.html'
 })
 export class HeroDetailComponent {
+  @Input()
+  hero: Hero;
   heroForm: FormGroup;
   states = states;
 
