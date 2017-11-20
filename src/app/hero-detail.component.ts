@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { states } from './data-model';
+import { states, Address, Hero } from './data-model';
 
 @Component({
   selector: 'app-hero-detail',
@@ -18,12 +18,7 @@ export class HeroDetailComponent {
   createForm(): void {
     this.heroForm = this.formBuilder.group({
       name: ['', Validators.required],
-      address: this.formBuilder.group({
-        street: '',
-        state: '',
-        city: '',
-        zip: ''
-      }),
+      address: this.formBuilder.group(new Address()),
       power: '',
       sidekick: ''
     });

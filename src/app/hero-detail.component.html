@@ -54,6 +54,6 @@
     </label>
   </div>
 </form>
-<p>Form value: {{ heroForm.value | json }}</p>
-<p>Form status: {{ heroForm.status | json }}</p>
-
+<p>Name value: {{ heroForm.get('name').value }}</p>
+<p>Name status: {{ heroForm.get('name').status }}</p>
+<p>Street value: {{ heroForm.get('address.street').value }}</p>
